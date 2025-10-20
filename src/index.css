@@ -1,1 +1,23 @@
+/* ........basic tailwind css--------- */
 @import "tailwindcss";
+
+
+@utility container {
+  margin-inline: auto;
+}
+
+
+
+/* -----------variables------- */
+
+@theme {
+  /* ---Fonts */
+  --font-popppins: "Poppins", sans-serif;
+
+  /* ---Colors */
+  --color-primary: #111827;
+  --color-body-text: #4b5563;
+  --text-vibrant-blu: #0EA5E9;
+  --color-border-color: #E5E7EB;
+  --color-gray-bg: #F8F8F8;
+}
