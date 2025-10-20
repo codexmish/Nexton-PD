@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { createBrowserRouter, createRoutesFromElements, Route, RouterContextProvider } from 'react-router'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterContextProvider, RouterProvider } from 'react-router'
 import LayoutOne from './layouts/LayoutOne'
 import Home from './pages/Home'
 
@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <>
-    <RouterContextProvider router={myRoute}/>
+    <RouterProvider router={myRoute}/>
     </>
   )
 }
