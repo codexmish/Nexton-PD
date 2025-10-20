@@ -25,10 +25,10 @@ const NavBar = () => {
           </div>
 
           {/* ------search option------ */}
-          <div className="search-box flex items-center gap-3 w-100 h-13 bg-gray-bg rounded-full text-primary text-sm font-normal font-popppins px-6 py-4">
-            <CiSearch className="text-body-text text-xl" />
+          <div className="search-box flex items-center gap-3 w-100 h-13 bg-gray-bg dark:bg-primary dark:border dark:border-white rounded-full text-primary dark:text-white text-sm font-normal font-popppins px-6 py-4">
+            <CiSearch className="text-body-text dark:text-white text-xl" />
             <input
-              className="border-none outline-none placeholder:text-body-text w-full"
+              className="border-none outline-none placeholder:text-body-text dark:placeholder:text-white w-full"
               placeholder="Search in products..."
               type="text"
             />
@@ -36,10 +36,10 @@ const NavBar = () => {
 
           {/* --------cart and user----- */}
           <div className="icons flex items-center gap-5">
-            <div className="person text-2xl text-body-text">
+            <div className="person text-2xl text-body-text dark:text-white">
               <RiUserLine />
             </div>
-            <div className="cart text-2xl text-body-text relative">
+            <div className="cart text-2xl text-body-text dark:text-white relative">
               <BsCartDash />
               <div className="absolute flex items-center justify-center h-5 w-5 rounded-full bg-vibrant-blu text-xs text-white font-medium font-popppins top-[-9px] right-[-6px]">
                 4
