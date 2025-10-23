@@ -12,15 +12,15 @@ const NavBar = () => {
 
 
 // ----------made this only fol localhost practice
-  useEffect(() => {
-    const saved = localStorage.getItem("mode");
-    console.log(saved)
-    if (saved === "dark") {
-      setTheme("dark")
-    } else {
-      setTheme("light")
-    }
-  }, [theme]);
+  // useEffect(() => {
+  //   const saved = localStorage.getItem("mode");
+  //   console.log(saved)
+  //   if (saved === "dark") {
+  //     setTheme("dark")
+  //   } else {
+  //     setTheme("light")
+  //   }
+  // }, [theme]);
 
 
 
