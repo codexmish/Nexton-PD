@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/images/logo.png";
 import darkLogo from "../assets/images/dark mode logo.png";
 import { CiSearch } from "react-icons/ci";
@@ -8,18 +8,37 @@ import Cart from "./cart";
 
 const NavBar = () => {
   const [theme, setTheme] = useState("light");
+  const [showcart, setShowcart] = useState(false);
+
+
+// ----------made this only fol localhost practice
+  useEffect(() => {
+    const saved = localStorage.getItem("mode");
+    console.log(saved)
+    if (saved === "dark") {
+      setTheme("dark")
+    } else {
+      setTheme("light")
+    }
+  }, [theme]);
+
+
+
+
 
   const handleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
     document.documentElement.classList.toggle("dark");
+    const isdark = document.documentElement.classList.contains("dark");
+
+    const newMode = isdark? "dark":"light"
+    localStorage.setItem("mode", newMode)
+    setTheme(localStorage.getItem("mode"))
   };
 
-  const [showcart, setShowcart] = useState(false);
 
   return (
     <>
-      <nav className="dark:bg-primary">
+      <nav className="dark:bg-primary hidden lg:block">
         <div className="main container flex items-center justify-between py-7">
           {/* --------Logo----- */}
           <div className="logo w-[119px]">
