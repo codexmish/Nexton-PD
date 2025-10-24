@@ -23,3 +23,39 @@
   --color-border-color: #E5E7EB;
   --color-gray-bg: #F8F8F8;
 }
+
+
+
+/* --------banner------- */
+
+.banner {
+  position: relative;
+}
+
+.banner .slick-dots {
+  display: flex !important;
+  gap: 12px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.banner .slick-dots li button {
+  font-size: 0;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #111827;
+  border-radius: 50%;
+}
+
+.banner .slick-dots .slick-active button {
+  background: #111827;
+}
+
+/* @media (max-width: 639.98px) {
+  .banner .slick-dots {
+    bottom: 32px;
+    left: 47px;
+  }
+} */
