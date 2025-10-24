@@ -1,14 +1,11 @@
 /* ........basic tailwind css--------- */
 @import "tailwindcss";
 
-
 @utility container {
   margin-inline: auto;
 }
 
-
 @custom-variant dark (&:where(.dark, .dark *));
-
 
 /* -----------variables------- */
 
@@ -18,13 +15,13 @@
 
   /* ---Colors */
   --color-primary: #111827;
-  --color-body-text: #4b5563;
-  --color-vibrant-blu: #0EA5E9;
-  --color-border-color: #E5E7EB;
-  --color-gray-bg: #F8F8F8;
+  --color-vibrant-blu: #0ea5e9;
+  --color-gray-bg: #f8f8f8;
+  --color-primary: #111827;
+  --color-secoundary: #4b5563;
+  --text-whitetext: #f8fafc;
+  --color-border: #e5e7eb;
 }
-
-
 
 /* --------banner------- */
 
@@ -52,10 +49,3 @@
 .banner .slick-dots .slick-active button {
   background: #111827;
 }
-
-/* @media (max-width: 639.98px) {
-  .banner .slick-dots {
-    bottom: 32px;
-    left: 47px;
-  }
-} */
