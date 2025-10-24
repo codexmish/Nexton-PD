@@ -11,58 +11,70 @@ const ProductCard = ({
   discount,
   rating,
   stock,
-  detailsClick
+  detailsClick,
 }) => {
 
 
+  function truncateText(text, maxLength) {
+    if (!text) {
+      return "";
+    } else if (text.length > maxLength) {
+      return text.slice(0, maxLength) + "...";
+    } else {
+      return text;
+    }
+  }
+
   return (
     <>
-    <div className="w-full flex items-center justify-center">
-      <div className="w-[290px] lg:w-[309px] h-[448px]">
-        <div className="w-full h-[337px] bg-gray-100 dark:bg-gray-500 rounded-2xl overflow-hidden relative group">
-          <img src={image} alt="ItemImage" />
+      <div className="w-full flex items-center justify-center">
+        <div className="w-[290px] lg:w-[309px] h-[448px]">
+          <div className="w-full h-[337px] bg-gray-100 dark:bg-gray-500 rounded-2xl overflow-hidden relative group">
+            <img src={image} alt="ItemImage" />
 
-          {/* --------hover icons--- */}
+            {/* --------hover icons--- */}
 
-          <div className="hover-icobs cursor-pointer absolute text-white text-3xl flex flex-col gap-4 top-10 right-[-50px] group-hover:right-4 duration-[.4s] z-10">
-            <button className="cursor-pointer">
-              <IoBagHandleOutline />
-            </button>
-            <button className="cursor-pointer" onClick={detailsClick}>
-              <TbListDetails />
-            </button>
+            <div className="hover-icobs cursor-pointer absolute text-white text-3xl flex flex-col gap-4 top-10 right-[-50px] group-hover:right-4 duration-[.4s] z-10">
+              <button className="cursor-pointer">
+                <IoBagHandleOutline />
+              </button>
+              <button className="cursor-pointer" onClick={detailsClick}>
+                <TbListDetails />
+              </button>
+            </div>
+
+            {/* --------Black overlay----- */}
+            <div className="w-full h-full group-hover:bg-[#0000008f] absolute top-0 left-0 duration-[.4s]"></div>
+          </div>
+          <div className="flex items-center justify-between mt-5 cursor-pointer">
+            <h2
+              onClick={detailsClick}
+              className="text-base text-black dark:text-white font-semibold font-popppind cursor-pointer"
+            >
+              {truncateText(title, 20)}
+            </h2>
+            <h2 className="text-base text-black dark:text-white font-semibold font-popppind">
+              {price}
+            </h2>
           </div>
 
-          {/* --------Black overlay----- */}
-          <div className="w-full h-full group-hover:bg-[#0000008f] absolute top-0 left-0 duration-[.4s]"></div>
-        </div>
-        <div className="flex items-center justify-between mt-5 cursor-pointer">
-          <h2 onClick={detailsClick} className="text-base text-black dark:text-white font-semibold font-popppind cursor-pointer">
-            {title.length > 30? title: title.substring(0,30)+'...'}
-          </h2>
-          <h2 className="text-base text-black dark:text-white font-semibold font-popppind">
-            {price}
-          </h2>
-        </div>
+          <div className="flex items-center justify-between">
+            <p className="text-[14px] text-black dark:text-white font-normal font-popppind">
+              {category}
+            </p>
+            <p className="line-through text-[14px] text-black dark:text-white font-normal font-popppind">
+              {discount}
+            </p>
+          </div>
 
-        <div className="flex items-center justify-between">
-          <p className="text-[14px] text-black dark:text-white font-normal font-popppind">
-            {category}
-          </p>
-          <p className="line-through text-[14px] text-black dark:text-white font-normal font-popppind">
-            {discount}
-          </p>
-        </div>
-
-        <div className="flex items-center gap-1 mt-4">
-          <FaStar className="text-[#FBBF24] text-xl" />
-          <p className="text-[14px] text-black dark:text-white font-normal font-popppind">
-            {rating}({stock})
-          </p>
+          <div className="flex items-center gap-1 mt-4">
+            <FaStar className="text-[#FBBF24] text-xl" />
+            <p className="text-[14px] text-black dark:text-white font-normal font-popppind">
+              {rating}({stock})
+            </p>
+          </div>
         </div>
       </div>
-
-    </div>
     </>
   );
 };
