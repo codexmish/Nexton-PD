@@ -49,3 +49,32 @@
 .banner .slick-dots .slick-active button {
   background: #111827;
 }
+
+
+/* ................Exploring css--- */
+
+.expo {
+  position: relative;
+}
+
+.expo .slick-dots {
+  display: flex !important;
+  gap: 12px;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.expo .slick-dots li button {
+  font-size: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--color-secoundary);
+  border-radius: 50%;
+}
+
+.expo .slick-dots .slick-active button {
+  background: #111827;
+}
+
