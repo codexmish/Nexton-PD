@@ -37,7 +37,7 @@ const Exploring = () => {
 
   return (
     <>
-      <section className="exploeing pt-13 lg:pt-[168px] pb-13 lg:pb-[143px] px-6 lg:px-0">
+      <section className="exploeing pt-13 lg:pt-[168px] pb-13 lg:pb-[143px] px-6 lg:px-0 dark:bg-primary">
         <div className="container expo">
           <CommonHead
             text1={"Start exploring. "}

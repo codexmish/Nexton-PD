@@ -8,9 +8,9 @@ import { RiRefund2Fill } from "react-icons/ri";
 const Brandinfo = () => {
   return (
     <>
-      <section className="pt-13 pb-8 px-6 lg:px-0">
+      <section className="pt-13 pb-8 px-6 lg:px-0 dark:bg-primary">
         <div className="container">
-          <h2 className="text-primary text-base font-popppind font-semibold px-3 lg:hidden">
+          <h2 className="text-primary dark:text-white text-base font-popppind font-semibold px-3 lg:hidden">
             Nexton® always with you
           </h2>
 
