@@ -4,7 +4,7 @@ import darkLogo from "../assets/images/dark mode logo.png";
 import { CiSearch } from "react-icons/ci";
 import { RiUserLine } from "react-icons/ri";
 import { BsCartDash } from "react-icons/bs";
-import Cart from "./cart";
+import Cart from "./Cart";
 
 const NavBar = () => {
   const [theme, setTheme] = useState("light");
