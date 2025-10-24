@@ -48,9 +48,6 @@ const Recommendation = () => {
   }, []);
 
 
-
-
-
   const navigate = useNavigate();
 
 
@@ -64,12 +61,14 @@ const Recommendation = () => {
 
   return (
     <>
-      <section className="recomendatio py-22 px-3 lg:px-0">
-        <div className="container reco">
+      <section className="recomendatio py-22 px-6 lg:px-0 dark:bg-primary">
+        <div className="container reco flex flex-col justify-center">
           <CommonHead
             text1={"Recommendations. "}
             text2={"Best matching products for you"}
           />
+          
+
 
           <Slider className="pt-10" {...settings}>
             {allProductes.slice(0, 9).map((item) => (
