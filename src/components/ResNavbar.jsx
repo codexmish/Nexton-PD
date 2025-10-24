@@ -5,7 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiUserLine } from "react-icons/ri";
 import { BsCartDash } from "react-icons/bs";
-import Cart from "./cart";
+import Cart from "./Cart";
 
 const ResNavbar = () => {
   const [showBottom, setShowBottom] = useState(false);

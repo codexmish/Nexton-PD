@@ -14,7 +14,7 @@ const Exploring = () => {
       else if (w <= 620) setSlidesToShow(1);
       else if (w <= 768) setSlidesToShow(2);
       else if (w <= 1024) setSlidesToShow(2);
-      else if (w <= 1289) setSlidesToShow(2);
+      else if (w <= 1280) setSlidesToShow(2);
       else setSlidesToShow(3);
     };
 

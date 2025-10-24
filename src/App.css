@@ -33,6 +33,7 @@
 }
 
 
+
 /* ................Exploring css--- */
 
 .expo {
@@ -58,4 +59,8 @@
 
 .expo .slick-dots .slick-active button {
   background: #111827;
+}
+
+.dark .expo .slick-dots .slick-active button {
+  background: white;
 }
