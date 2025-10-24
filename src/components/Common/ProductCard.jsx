@@ -2,7 +2,6 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { TbListDetails } from "react-icons/tb";
-import { Link } from "react-router";
 
 const ProductCard = ({
   image,
@@ -14,24 +13,7 @@ const ProductCard = ({
   stock,
   detailsClick
 }) => {
-  // // -----------Text Truncation PRO process
 
-  // function truncateText(text, maxLength) {
-  // if (!text) return "";
-  // return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
-  // }
-
-  // -----------Text Truncation gorib process
-
-  function truncateText(text, maxLength) {
-    if (!text) {
-      return "";
-    } else if (text.length > maxLength) {
-      return text.slice(0, maxLength) + "...";
-    } else {
-      return text;
-    }
-  }
 
   return (
     <>
@@ -55,8 +37,7 @@ const ProductCard = ({
         </div>
         <div className="flex items-center justify-between mt-5 cursor-pointer">
           <h2 onClick={detailsClick} className="text-base text-black font-semibold font-popppind cursor-pointer">
-            
-            {truncateText(title, 20)}
+            {title.length > 30? title: title.substring(0,30)+'...'}
           </h2>
           <h2 className="text-base text-black font-semibold font-popppind">
             {price}
