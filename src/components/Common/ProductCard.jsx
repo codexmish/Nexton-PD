@@ -29,7 +29,7 @@ const ProductCard = ({
     <>
       <div className="w-full flex items-center justify-center">
         <div className="w-[290px] lg:w-[309px] h-[448px]">
-          <div className="w-full h-[337px] bg-gray-100 dark:bg-gray-500 rounded-2xl overflow-hidden relative group">
+          <div className="w-full h-[337px] bg-gray-100 dark:bg-gray-500 rounded-2xl overflow-hidden relative group" onClick={detailsClick}>
             <img src={image} alt="ItemImage" />
 
             {/* --------hover icons--- */}

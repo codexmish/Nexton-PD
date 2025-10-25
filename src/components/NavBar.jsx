@@ -5,6 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import { RiUserLine } from "react-icons/ri";
 import { BsCartDash } from "react-icons/bs";
 import Cart from "./Cart";
+import { Link } from "react-router";
 
 const NavBar = () => {
   const [theme, setTheme] = useState("light");
@@ -41,9 +42,9 @@ const NavBar = () => {
       <nav className="dark:bg-primary hidden lg:block">
         <div className="main container flex items-center justify-between py-7">
           {/* --------Logo----- */}
-          <div className="logo w-[119px]">
+          <Link to={'/'} className="logo w-[119px] cursor-pointer">
             <img src={theme === "light" ? logo : darkLogo} alt="logo" />
-          </div>
+          </Link>
 
           {/* ------search option------ */}
           <div className="search-box flex items-center gap-3 w-100 h-13 bg-gray-bg dark:bg-primary dark:border dark:border-white rounded-full text-primary dark:text-white text-sm font-normal font-popppins px-6 py-4">

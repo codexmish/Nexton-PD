@@ -6,6 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RiUserLine } from "react-icons/ri";
 import { BsCartDash } from "react-icons/bs";
 import Cart from "./Cart";
+import { Link } from "react-router";
 
 const ResNavbar = () => {
   const [showBottom, setShowBottom] = useState(false);
@@ -26,9 +27,9 @@ const ResNavbar = () => {
       <nav className="lg:hidden dark:bg-primary">
         <div className="main flex items-center justify-between px-4 py-5">
           {/* ------logo------ */}
-          <div className="logo w-6">
+          <Link to={'/'} className="logo w-6 cursor-pointer">
             <img src={theme === "light" ? logo : darLogo} alt="" />
-          </div>
+          </Link>
 
           {/* ------search option------ */}
           <div className="search-box flex items-center gap-3 w-43 h-9 bg-gray-bg dark:bg-primary dark:border dark:border-white rounded-full text-primary dark:text-white text-xs font-normal font-popppins px-2 py-3">
