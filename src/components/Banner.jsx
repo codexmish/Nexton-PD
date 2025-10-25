@@ -2,6 +2,7 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import CommonBanner from "./Common/CommonBanner";
 import back from "../assets/images/hero.png";
+import darkback from "../assets/images/dark-hero.png";
 import Slider from "react-slick";
 
 const Banner = () => {
@@ -16,25 +17,25 @@ const Banner = () => {
 
   return (
     <>
-      <section className="banner bg-[#f3f3f3]">
+      <section className="banner bg-[#f3f3f3] dark:bg-primary">
         <Slider {...settings}>
           <div>
             <CommonBanner
-              hero={back}
+              darkHero={darkback}
               textOne={"Starting from: $49.99"}
               textTwo={"Exclusive collection for everyone"}
             />
           </div>
           <div>
             <CommonBanner
-              hero={back}
+              darkHero={darkback}
               textOne={"Starting from: $49.99"}
               textTwo={"Exclusive collection for everyone"}
             />
           </div>
           <div>
             <CommonBanner
-              hero={back}
+              darkHero={darkback}
               textOne={"Starting from: $49.99"}
               textTwo={"Exclusive collection for everyone"}
             />

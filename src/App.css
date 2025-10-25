@@ -28,8 +28,16 @@
   border-radius: 50%;
 }
 
+.dark .banner .slick-dots li button {
+  border: 1px solid white;
+}
+
 .banner .slick-dots .slick-active button {
   background: #111827;
+}
+
+.dark .banner .slick-dots .slick-active button {
+  background: white;
 }
 
 
