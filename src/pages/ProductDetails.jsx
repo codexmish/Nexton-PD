@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { BsStars } from "react-icons/bs";
 import { FaMinus, FaPlus, FaStar } from "react-icons/fa";
 import { HiShoppingBag } from "react-icons/hi";
-import CommonHead from "../components/Common/CommonHead";
 import Slider from "react-slick";
 import axios from "axios";
-import ProductCard from "../components/Common/ProductCard";
 import { useNavigate, useParams } from "react-router";
+import ProductCard from "../components/Common/ProductCard";
+import CommonHead from "../components/Common/CommonHead";
 
 const ProductDetails = () => {
   window.scrollTo(0, 0);

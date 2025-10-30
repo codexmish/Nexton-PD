@@ -3,7 +3,7 @@ import './App.css'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterContextProvider, RouterProvider } from 'react-router'
 import LayoutOne from './layouts/LayoutOne'
 import Home from './pages/Home'
-import ProductDetails from './components/ProductDetails'
+import ProductDetails from './pages/ProductDetails'
 
 const App = () => {
 
